@@ -30,42 +30,42 @@ public class Config {
     }
 
     /**
-     * @return the applicationName
+     * @return the applicationName.
      */
     public String getApplicationName() {
         return applicationName;
     }
 
     /**
-     * @param newApplicationName the applicationName to set
+     * @param newApplicationName the applicationName to set.
      */
     public void setApplicationName(final String newApplicationName) {
         this.applicationName = newApplicationName;
     }
 
     /**
-     * @return the tokensDirectoryPath
+     * @return the tokensDirectoryPath.
      */
     public String getTokensDirectoryPath() {
         return tokensDirectoryPath;
     }
 
     /**
-     * @param newTokensDirectoryPath the tokensDirectoryPath to set
+     * @param newTokensDirectoryPath the tokensDirectoryPath to set.
      */
     public void setTokensDirectoryPath(final String newTokensDirectoryPath) {
         this.tokensDirectoryPath = newTokensDirectoryPath;
     }
 
     /**
-     * @return the credentialsFilePath
+     * @return the credentialsFilePath.
      */
     public String getCredentialsFilePath() {
         return credentialsFilePath;
     }
 
     /**
-     * @param newCredentialsFilePath the credentialsFilePath to set
+     * @param newCredentialsFilePath the credentialsFilePath to set.
      */
     public void setCredentialsFilePath(final String newCredentialsFilePath) {
         this.credentialsFilePath = newCredentialsFilePath;

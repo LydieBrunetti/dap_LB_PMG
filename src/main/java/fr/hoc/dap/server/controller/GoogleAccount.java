@@ -129,8 +129,7 @@ public class GoogleAccount extends GoogleService {
 
     /**
      * Build a current host (and port) absolute URL.
-     * @param The current HTTP request to extract schema, host, port
-     * informations.
+     * @param req The current HTTP request to extract schema, host, port informations.
      * @param destination the "path" to the resource.
      * @return an absolute URI.
      */

@@ -16,17 +16,22 @@ import com.google.api.client.util.store.DataStore;
 
 import fr.hoc.dap.server.service.CredentialService;
 
+/** Service JEE pour vue Web. */
 @Controller
 public class ServiceController {
 
+    /** liste des utilisateurs. */
     @Autowired
     private CredentialService credSrv;
 
-    /*
-     * la vue.
+    /** lien avec vue admin Browser.
+     * @param model vue html.
+     * @throws GeneralSecurityException security error.
+     * @throws IOException google IO.
+     * @return vue.
      */
     @RequestMapping("/admin")
-    public String admin(ModelMap model) throws GeneralSecurityException, IOException {
+    public String admin(final ModelMap model) throws GeneralSecurityException, IOException {
         model.addAttribute("maVar", "Admin");
 
         DataStore<StoredCredential> userMap;
@@ -41,8 +46,6 @@ public class ServiceController {
 
         }
         model.addAttribute("users", mapUsers);
-
-        // userMap = credSrv.deleteUser(null);
 
         return "admin";
 
