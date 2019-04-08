@@ -16,7 +16,7 @@ import com.google.api.client.util.store.DataStore;
 
 import fr.hoc.dap.server.service.CredentialService;
 
-/** Service JEE pour vue Web. */
+/** Service JEE pour la vue Web. */
 @Controller
 public class ServiceController {
 

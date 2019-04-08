@@ -14,7 +14,7 @@ import com.google.api.services.calendar.model.Event;
 import fr.hoc.dap.server.service.CalendarService;
 
 /**
- * @author house
+ * @author house.
  *
  */
 @RestController

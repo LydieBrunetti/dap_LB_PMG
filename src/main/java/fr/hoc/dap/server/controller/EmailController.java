@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.hoc.dap.server.service.GmailService;
 
 /**
- * @author house
+ * @author house.
  *
  */
 @RestController

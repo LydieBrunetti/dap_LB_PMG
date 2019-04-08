@@ -18,7 +18,7 @@ import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.model.ListMessagesResponse;
 import com.google.api.services.gmail.model.Message;
 
-/** Service pour la messagerie et le nombre de mails. */
+/** Service pour la messagerie et le nombre de mails non lus. */
 @Service
 public final class GmailService extends GoogleService {
     /** Logger. */

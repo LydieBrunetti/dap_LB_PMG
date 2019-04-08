@@ -13,7 +13,7 @@ import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.Events;
 
-/** Service pour obtenir le next event. */
+/** Service pour obtenir le prochain event. */
 @Service
 public final class CalendarService extends GoogleService {
     /**

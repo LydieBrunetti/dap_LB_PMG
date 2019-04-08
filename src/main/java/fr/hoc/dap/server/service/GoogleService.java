@@ -25,7 +25,7 @@ import com.google.api.services.gmail.GmailScopes;
 import fr.hoc.dap.server.Config;
 
 /**
- * Classe parente de tout le serviceGoogle. Permet de gérer les droits.
+ * Classe parente pour tout le serviceGoogle. Permet de gérer les droits.
  * @author house
  */
 @Service

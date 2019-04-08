@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.google.api.client.auth.oauth2.StoredCredential;
 import com.google.api.client.util.store.DataStore;
 
-/** Service pour obtenir la liste des utilisateurs et leurs infos de connection. */
+/** Le Service pour obtenir la liste des utilisateurs et leurs infos de connection. */
 @Service
 public class CredentialService extends GoogleService {
 

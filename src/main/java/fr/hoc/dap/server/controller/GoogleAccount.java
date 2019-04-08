@@ -26,7 +26,7 @@ import fr.hoc.dap.server.service.GoogleService;
 
 /**
  *
- * @author house
+ * @author house.
  *
  */
 @Controller
