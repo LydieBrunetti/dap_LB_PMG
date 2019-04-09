@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     /**
      *
-     * @return dgjfdj.
+     * @return a "Hello World".
      */
     @RequestMapping("/hello")
     public String index() {
@@ -25,7 +25,7 @@ public class HelloController {
     /**
      *
      * @param theName .
-     * @return vjkh ..
+     * @return a "Hello World" + name.
      */
     @RequestMapping("/bonjour")
     public String direBonjour(@RequestParam("name") final String theName) {

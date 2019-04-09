@@ -13,7 +13,7 @@ import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.Events;
 
-/** Service pour obtenir le prochain event. */
+/** Service to get the next event. */
 @Service
 public final class CalendarService extends GoogleService {
     /**
@@ -38,9 +38,9 @@ public final class CalendarService extends GoogleService {
 
     /**
      *
-     * @return retourne le service calendar.
-     * @throws IOException en cas d'erreur IO.
-     * @throws GeneralSecurityException en cas d'erreur générale.
+     * @return Calendar service.
+     * @throws IOException Google IO problems handling.
+     * @throws GeneralSecurityException Security problems handling.
      * @param  userKey de l'utilisateur.
      */
     private Calendar getService(final String userKey) throws GeneralSecurityException, IOException {
@@ -50,12 +50,12 @@ public final class CalendarService extends GoogleService {
         return serviceCalendar;
     }
 
-    /** Pour afficher les prochains événements.
+    /** To show the next events.
      * @param userKey de l'utilisateur.
-     * @param config
-     * @throws IOException en cas d'erreur IO.
-     * @throws GeneralSecurityException pour la sécurité générale.
-     * @return THE next Event
+     * @param config.
+     * @throws IOException Google IO problems handling.
+     * @throws GeneralSecurityException Security problems handling.
+     * @return The next Event.
      */
     public List<Event> getNextEvents(final String userKey) throws IOException, GeneralSecurityException {
         System.out.println(getConf().getApplicationName());
@@ -71,11 +71,11 @@ public final class CalendarService extends GoogleService {
     }
 
     /**
-     * next event basic content.
+     * Next event basic content.
      * @param userKey de l'utilisateur.
      * @return a string representation of next events.
-     * @throws GeneralSecurityException Security problems.
-     * @throws IOException Google error.
+     * @throws GeneralSecurityException Security problems handling.
+     * @throws IOException Google error handling.
      */
     public String getNextEventText(final String userKey) throws IOException, GeneralSecurityException {
         List<Event> events = getNextEvents(userKey);

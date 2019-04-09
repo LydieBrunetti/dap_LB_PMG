@@ -18,7 +18,7 @@ import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.model.ListMessagesResponse;
 import com.google.api.services.gmail.model.Message;
 
-/** Service pour la messagerie et le nombre de mails non lus. */
+/** Service for messaging and the number of unread emails. */
 @Service
 public final class GmailService extends GoogleService {
     /** Logger. */
@@ -27,9 +27,9 @@ public final class GmailService extends GoogleService {
     /**
      *
      * @param userKey de l'utilisateur.
-     * @return retourne le service.
-     * @throws IOException Google Error.
-     *@throws GeneralSecurityException security error.
+     * @return Gmailservice.
+     * @throws IOException Google error handling.
+     *@throws GeneralSecurityException Security error handling.
      */
     private Gmail getService(final String userKey) throws GeneralSecurityException, IOException {
         final NetHttpTransport httpTRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
@@ -39,12 +39,12 @@ public final class GmailService extends GoogleService {
         return serviceGmail;
     }
 
-    /** méthode pour obtenir le nombre de messages. */
+    /** To get the number of emails. */
     /**
      * @param userKey clé d'utilisateur.
-     * @throws GeneralSecurityException pour les erreurs de sécurité.
-     * @throws IOException pour les exceptions IO.
-     * @return le nombre de mails non-lus.
+     * @throws GeneralSecurityException Security error handling.
+     * @throws IOException Google Error handling.
+     * @return the number of unread emails.
      */
     public Integer getNbEmail(final String userKey) throws GeneralSecurityException, IOException {
 
@@ -60,12 +60,12 @@ public final class GmailService extends GoogleService {
 
     /**
      *
-     * @param userId c'est le parametre qui gere l'identifiant de l'utilisateur.
-     * @param userkey clé d'utilisateur.
-     * @param query c'est le parametre qui gere les recherches.
+     * @param userId Identifiant de l'utilisateur.
+     * @param userkey Clé d'utilisateur.
+     * @param query Manages the searches.
      * @return message.
-     * @throws IOException c'est le parametre qui gere les exception.
-     * @throws GeneralSecurityException security error.
+     * @throws IOException Google error handling.
+     * @throws GeneralSecurityException Security error handling.
      */
     public List<Message> listMessagesMatchingQuery(final String userId, final String query, final String userkey)
             throws IOException, GeneralSecurityException {

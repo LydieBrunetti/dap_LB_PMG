@@ -7,11 +7,11 @@ package fr.hoc.dap.server;
  *
  */
 public class Config {
-    /** chemin du dossier Tokens.*/
+    /** Tokens folder path.*/
     private static final String TOKENS_DIRECTORY_PATH = System.getProperty("user.home") + "/dap/tokens";
-    /** chemin du dossier Credentials.*/
+    /** Credentials folder path.*/
     private static final String CREDENTIALS_FILE_PATH = System.getProperty("user.home") + "/dap/credentials_Web.json";
-    /** Nom de l'application.*/
+    /** Application name.*/
     private static final String APPLICATION_NAME = "HoC DaP";
     /**idem.*/
     private String applicationName;
@@ -21,7 +21,7 @@ public class Config {
     private String credentialsFilePath;
 
     /**
-     *constructeur.
+     *constructor.
      */
     public Config() {
         applicationName = APPLICATION_NAME;

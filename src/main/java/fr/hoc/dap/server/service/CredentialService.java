@@ -8,14 +8,14 @@ import org.springframework.stereotype.Service;
 import com.google.api.client.auth.oauth2.StoredCredential;
 import com.google.api.client.util.store.DataStore;
 
-/** Le Service pour obtenir la liste des utilisateurs et leurs infos de connection. */
+/** Service to get the list of users and their connection information. */
 @Service
 public class CredentialService extends GoogleService {
 
-    /** méthode pour récupérer la user list.
-     * @return la user list.
-     * @throws GeneralSecurityException gestion des erreurs de sécurité.
-     * @throws IOException gestion des erreurs IO. */
+    /** To get the users list.
+     * @return The users list.
+     * @throws GeneralSecurityException Security problems handling.
+     * @throws IOException IO error handling.*/
     public DataStore<StoredCredential> getUser() throws GeneralSecurityException, IOException {
         DataStore<StoredCredential> datas = getFlow().getCredentialDataStore();
 

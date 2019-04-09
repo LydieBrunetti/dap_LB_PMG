@@ -25,13 +25,13 @@ import com.google.api.services.gmail.GmailScopes;
 import fr.hoc.dap.server.Config;
 
 /**
- * Classe parente pour tout le serviceGoogle. Permet de gérer les droits.
+ * Parent class for all the ServiceGoogle. Allows you to manage rights.
  * @author house
  */
 @Service
 public class GoogleService {
     /**
-     * configuration.
+     * Configuration.
      */
     @Autowired
     private Config maConf;
@@ -60,10 +60,10 @@ public class GoogleService {
     /**
      * Creates an authorized Credential object.
      * @param httpTransport The network HTTP Transport.
-     * @param userKey userKey de l'utilisateur.
+     * @param userKey UserKey de l'utilisateur.
      * @return An authorized Credential object.
      * @throws IOException If the credentials.json file cannot be found.
-     * @throws GeneralSecurityException .
+     * @throws GeneralSecurityException Security problems handling.
      */
     protected Credential getCredentials(final NetHttpTransport httpTransport, final String userKey)
             throws IOException, GeneralSecurityException {
@@ -80,7 +80,7 @@ public class GoogleService {
     /**
      * Load a Google flow.
      * @return A Google Flow.
-     * @throws GeneralSecurityException security error.
+     * @throws GeneralSecurityException Security error handling.
      * @throws IOException If the credentials.json and tokens files cannot be found.
      */
     public GoogleAuthorizationCodeFlow getFlow() throws GeneralSecurityException, IOException {
@@ -109,7 +109,7 @@ public class GoogleService {
 
     /**
      * Define a new Dap Configuration.
-     * @param config the new Config
+     * @param config The new Config.
      */
     public void setConf(final Config config) {
         maConf = config;

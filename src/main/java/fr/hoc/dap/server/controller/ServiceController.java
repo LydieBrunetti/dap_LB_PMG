@@ -16,19 +16,19 @@ import com.google.api.client.util.store.DataStore;
 
 import fr.hoc.dap.server.service.CredentialService;
 
-/** Service JEE pour la vue Web. */
+/** JEE Service for Web view. */
 @Controller
 public class ServiceController {
 
-    /** liste des utilisateurs. */
+    /** users list. */
     @Autowired
     private CredentialService credSrv;
 
-    /** lien avec vue admin Browser.
-     * @param model vue html.
-     * @throws GeneralSecurityException security error.
-     * @throws IOException google IO.
-     * @return vue.
+    /** link with administrator view (Browser).
+     * @param model HTML view.
+     * @throws GeneralSecurityException Security error handling.
+     * @throws IOException Google IO error handling.
+     * @return view.
      */
     @RequestMapping("/admin")
     public String admin(final ModelMap model) throws GeneralSecurityException, IOException {

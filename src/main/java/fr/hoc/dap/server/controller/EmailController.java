@@ -25,8 +25,8 @@ public class EmailController {
      * display number of unread email.
      * @param userKey Clé d'utilisateur.
      * @return the number of unread emails.
-     * @throws GeneralSecurityException Security problems.
-     * @throws IOException Google error.
+     * @throws GeneralSecurityException Security problems handling.
+     * @throws IOException Google error handling.
      */
     @RequestMapping("/email/nbunread")
     public Integer displayNbEmail(@RequestParam final String userKey) throws GeneralSecurityException, IOException {

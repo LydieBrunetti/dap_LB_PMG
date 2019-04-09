@@ -24,9 +24,9 @@ final class Launcher {
     private static final Logger LOG = LogManager.getLogger();
 
     /**
-     * @param args pour générer des arguments.
-     * @throws IOException le parametre qui gère les exceptions.
-     * @throws GeneralSecurityException le parametre qui gère la sécurité générale.
+     * @param args to generat arguments.
+     * @throws IOException IO exception handling.
+     * @throws GeneralSecurityException Security exception handling.
      */
     public static void main(final String... args) throws IOException, GeneralSecurityException {
         // System.out.println("Mon agenda 2019");

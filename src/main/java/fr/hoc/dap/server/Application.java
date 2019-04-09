@@ -17,12 +17,13 @@ import org.springframework.context.annotation.Bean;
  */
 @SpringBootApplication
 public class Application {
-
+    /** Logger.
+    */
     private static final Logger LOG = LogManager.getLogger();
 
     /**
      *
-     * @param args paramètres de connexion.
+     * @param args connection parameters.
      */
     public static void main(final String[] args) {
         SpringApplication.run(Application.class, args);
@@ -42,7 +43,7 @@ public class Application {
 
     /**
      *
-     * @param ctx ?.
+     * @param ctx application context.
      * @return args.
       * @Bean
       */

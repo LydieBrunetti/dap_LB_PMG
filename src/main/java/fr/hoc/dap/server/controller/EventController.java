@@ -28,9 +28,9 @@ public class EventController {
     /**
      *
      * @param userKey clé utilisateur.
-     * @return return le prochain rendez-vous.
-     * @throws GeneralSecurityException Security problems.
-     * @throws IOException Google error.
+     * @return return the next event.
+     * @throws GeneralSecurityException Security problems handling.
+     * @throws IOException Google error handling.
      */
     @RequestMapping("/event/next")
     public List<Event> getNextEvents(@RequestParam("userKey") final String userKey)
@@ -45,9 +45,9 @@ public class EventController {
     /**
      *
      * @param userKey clé utilisateur.
-     * @return return le prochain rendez-vous en String.
-     * @throws GeneralSecurityException Security problems.
-     * @throws IOException Google error.
+     * @return return the next event (String version).
+     * @throws GeneralSecurityException Security problems handling.
+     * @throws IOException Google error handling.
      */
     @RequestMapping("/event/nextString")
     public String getNextEventsString(@RequestParam("userKey") final String userKey)
