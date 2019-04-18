@@ -16,7 +16,9 @@ import com.google.api.client.util.store.DataStore;
 
 import fr.hoc.dap.server.service.CredentialService;
 
+//TODO lbpmg by Djer |JavaDoc| Tous le projet est du JEE, ca n'est pas spécifique à cette classe. "TO Handle Admin Action" serait mieux
 /** JEE Service for Web view. */
+//TODO lbpmg by Djer |POO| Mettre "Service" dans le nom de la classe est un peu ambigüe : "AdminController" serait mieux
 @Controller
 public class ServiceController {
 
@@ -24,14 +26,15 @@ public class ServiceController {
     @Autowired
     private CredentialService credSrv;
 
-    /** link with administrator view (Browser).
-     * @param model HTML view.
+    /** Link with administrator view (Browser).
+     * @param model HTML view. //TODO lbpmg by Djer |JavaDoc| NON, le modele n'est PAS la vue. "existing model to add usefull data for view" serait mieux. En général on documente "peu" ce paramètre car c'est un "standard MVC". "MVC Model" serait bien aussi.
      * @throws GeneralSecurityException Security error handling.
      * @throws IOException Google IO error handling.
      * @return view.
      */
     @RequestMapping("/admin")
     public String admin(final ModelMap model) throws GeneralSecurityException, IOException {
+      //TODO lbpmg by Djer |MVC| Le paramètre "maVar" n'est pas utile dans la view "admin"
         model.addAttribute("maVar", "Admin");
 
         DataStore<StoredCredential> userMap;
@@ -48,7 +51,6 @@ public class ServiceController {
         model.addAttribute("users", mapUsers);
 
         return "admin";
-
     }
 }
 

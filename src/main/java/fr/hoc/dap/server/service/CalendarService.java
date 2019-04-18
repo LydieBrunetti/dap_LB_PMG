@@ -13,6 +13,7 @@ import com.google.api.services.calendar.Calendar;
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.Events;
 
+//TODO lbpmg by Djer |JavaDoc| le "next Event" est UNE des méthdoe de se service. "Manage Google Calendar" serait mieux
 /** Service to get the next event. */
 @Service
 public final class CalendarService extends GoogleService {
@@ -23,6 +24,7 @@ public final class CalendarService extends GoogleService {
 
     }
 
+    //TODO lbpmg by Djer |Spring| Le Singleton est maintenant géré par Spring, cette attribut (et la méthode getIsntance()) n'est plus utile
     /**
      *
      */
@@ -36,6 +38,7 @@ public final class CalendarService extends GoogleService {
         return INSTANCE;
     }
 
+    //TODO lbpmg by Djer |JavaDoc| Il manque la "description" (de la méthode) : la première ligne de la JavaDoc
     /**
      *
      * @return Calendar service.
@@ -43,6 +46,7 @@ public final class CalendarService extends GoogleService {
      * @throws GeneralSecurityException Security problems handling.
      * @param  userKey de l'utilisateur.
      */
+    //TODO lbpmg by Djer |JavaDoc| "buildService" serait mieu comme nom de méthode
     private Calendar getService(final String userKey) throws GeneralSecurityException, IOException {
         final NetHttpTransport httpTRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
         Calendar serviceCalendar = new Calendar.Builder(httpTRANSPORT, JSON_FACTORY,
@@ -57,7 +61,9 @@ public final class CalendarService extends GoogleService {
      * @throws GeneralSecurityException Security problems handling.
      * @return The next Event.
      */
+    //TODO lbpmg by Djer |JavaDoc| Pourrait attendre un dexuiéme parmaètre "nbToDisplay", cela justifierait de renvoyer une liste (qui ne contiendrait parfois que UN seul élément). Ca sera alors à l'appelant (le controller) de définir le nombre de prochains évènnement à afficher.
     public List<Event> getNextEvents(final String userKey) throws IOException, GeneralSecurityException {
+      //TODO lbpmg by Djer |Log4J| une eptite Log en infio ? "Searching for next event for user : " + userKey
         System.out.println(getConf().getApplicationName());
         final Integer top = 1;
         // Calendar service = getService();
@@ -78,14 +84,17 @@ public final class CalendarService extends GoogleService {
      * @throws IOException Google error handling.
      */
     public String getNextEventText(final String userKey) throws IOException, GeneralSecurityException {
+      
         List<Event> events = getNextEvents(userKey);
 
         String theNextEvent = "";
         if (events.isEmpty()) {
             theNextEvent = "No upcoming events found.";
+            //TODO lbpmg by Djer |POO| Pas de SysOut sur un serveur !
             System.out.println("No upcoming events found.");
         } else {
             theNextEvent = "Upcoming events";
+            //TODO lbpmg by Djer |POO| Pas de SysOut sur un serveur !
             System.out.println("Upcoming events ; ");
             for (Event event : events) {
                 DateTime start = event.getStart().getDateTime();
@@ -93,9 +102,11 @@ public final class CalendarService extends GoogleService {
                     start = event.getStart().getDate();
                 }
                 theNextEvent = theNextEvent + event.getSummary() + "(" + start + "), ";
+                //TODO lbpmg by Djer |POO| Pas de SysOut sur un serveur !
                 System.out.printf("%s (%s)\n", event.getSummary(), start);
             }
         }
+        //TODO lbpmg by Djer |Log4J| Tu peux ajouter un message dans la LOG ici (en info) avec le result (et supprimer les 3 "SysOut" au dessus)
 
         return theNextEvent;
     }

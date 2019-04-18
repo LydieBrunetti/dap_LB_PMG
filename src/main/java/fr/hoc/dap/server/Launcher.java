@@ -6,6 +6,7 @@ import java.security.GeneralSecurityException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+//TODO lbpmg by Djer |Command Line| Cette classe n'est plus utile, elle est "remplacée" par "Application" depuis qu'on utilise Spring Boot.
 /**
  * Entry point.
  * @author house

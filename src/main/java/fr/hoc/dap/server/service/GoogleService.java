@@ -38,12 +38,10 @@ public class GoogleService {
 
     // protected static final String bob = "Google Calendar API Java Quickstart";
     /** . */
-
     protected static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
 
     /** Dossier dans lequel les autorisations accordées par l'utilisateur seront sauvegardées . */
     // protected static final String credentialFolder = "tokens";
-
     private List<String> scopes;
 
     /** emplacement du fichier .*/
@@ -97,7 +95,6 @@ public class GoogleService {
                         .setAccessType("offline").build();
 
         return flow;
-
     }
 
     /**
@@ -114,5 +111,4 @@ public class GoogleService {
     public void setConf(final Config config) {
         maConf = config;
     }
-
 }
