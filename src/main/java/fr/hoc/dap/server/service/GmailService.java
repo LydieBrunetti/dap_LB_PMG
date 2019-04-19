@@ -24,6 +24,7 @@ public final class GmailService extends GoogleService {
     /** Logger. */
     private static final Logger LOG = LogManager.getLogger();
 
+  //TODO lbpmg by Djer |JavaDoc| Il manque la "description" (de la méthode) : la première ligne de la JavaDoc
     /**
      *
      * @param userKey de l'utilisateur.
@@ -31,6 +32,7 @@ public final class GmailService extends GoogleService {
      * @throws IOException Google error handling.
      *@throws GeneralSecurityException Security error handling.
      */
+  //TODO lbpmg by Djer |POO| "buildService" serait mieux comme nom de méthode
     private Gmail getService(final String userKey) throws GeneralSecurityException, IOException {
         final NetHttpTransport httpTRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
         Gmail serviceGmail = new Gmail.Builder(httpTRANSPORT, JSON_FACTORY, getCredentials(httpTRANSPORT, userKey))
@@ -39,6 +41,7 @@ public final class GmailService extends GoogleService {
         return serviceGmail;
     }
 
+  //TODO lbpmg by Djer |JavaDoc| Attention Seul la Javadoc au plus PRES de la méthode est pris en compte. Cette description devrait être la première ligne de la JavaDoc deja existante
     /** To get the number of emails. */
     /**
      * @param userKey clé d'utilisateur.
@@ -55,9 +58,9 @@ public final class GmailService extends GoogleService {
         Integer nbResult = messages.size();
 
         return nbResult;
-
     }
 
+  //TODO lbpmg by Djer |JavaDoc| Il manque la "description" (de la méthode) : la première ligne de la JavaDoc
     /**
      *
      * @param userId Identifiant de l'utilisateur.
@@ -91,6 +94,7 @@ public final class GmailService extends GoogleService {
             }
         }
 
+      //TODO lbpmg by Djer |POO| Pas de SysOut sur un serveur ! Tu peux utiliser une Log (en Info) contextualisée à la place
         System.out.println(messages.size());
 
         return messages;

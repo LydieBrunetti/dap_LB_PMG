@@ -16,6 +16,7 @@ public class CredentialService extends GoogleService {
      * @return The users list.
      * @throws GeneralSecurityException Security problems handling.
      * @throws IOException IO error handling.*/
+    //TODO lbpmg by Djer |POO| "getUsers" serait mieux comme nom.
     public DataStore<StoredCredential> getUser() throws GeneralSecurityException, IOException {
         DataStore<StoredCredential> datas = getFlow().getCredentialDataStore();
 

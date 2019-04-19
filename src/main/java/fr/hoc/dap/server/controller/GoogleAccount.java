@@ -24,10 +24,10 @@ import com.google.api.client.http.GenericUrl;
 
 import fr.hoc.dap.server.service.GoogleService;
 
+//TODO lbpmg by Djer |JavaDoc| Il manque la "description" (de la classe) : la première ligne de la JavaDoc
 /**
  *
  * @author house.
- *
  */
 @Controller
 public class GoogleAccount extends GoogleService {
@@ -174,5 +174,4 @@ public class GoogleAccount extends GoogleService {
         // only when error occurs, else redirected BEFORE
         return response;
     }
-
 }
