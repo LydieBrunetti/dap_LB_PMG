@@ -7,4 +7,4 @@ Projet en Java consistant à utiliser l'API Google pour récupérer le nombre d'
 
 Ce projet dispose de deux "extensions" : dap_command_line et dap_swing.
 
-Ce projet a donné lieu à une évaluation.
+Ce projet a donné lieu à une évaluation, d'où les remarques de notre formateur !
